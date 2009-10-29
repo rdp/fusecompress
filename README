@@ -46,10 +46,11 @@ Requires:
 	liblzo2
 
 Example (with apt-get):
-
-	$ sudo apt-get install libboost-dev libz-dev liblzo2-dev libmagic-dev libfuse-dev -y
+       $ sudo apt-get install libboost-dev libz-dev liblzo2-dev libmagic-dev libfuse-dev fuse-utils fuse2 -y
 	(also install the xz-beta manually, above)
 	Note that 32-bit users may need to recompile boost by hand for long file support (see below).
+       $ usermod -a -G fuse {username} # might not be necessary
+       $ reboot
 
 Compile:
 
